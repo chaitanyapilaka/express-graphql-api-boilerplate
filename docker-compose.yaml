@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  express-graphql-api-boilerplate:
+    image: express-graphql-api-boilerplate
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NODE_VERSION: 16.14.0
+        PORT: 3000
+    env_file:
+      - .env.production
+    volumes:
+    - ./keys:/usr/src/app/keys:ro
+    ports:
+      - "3000:3000"

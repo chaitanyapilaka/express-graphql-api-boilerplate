@@ -1,0 +1,9 @@
+.env
+.circleci
+.idea
+docs
+node_modules
+logs
+docker-compose.yaml
+keys
+scripts/.ignored
